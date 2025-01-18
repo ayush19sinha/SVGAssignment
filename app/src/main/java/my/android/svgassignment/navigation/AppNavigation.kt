@@ -23,11 +23,11 @@ fun AppNavigation(dogViewModel: DogViewModel) {
         }
 
         composable<GenerateScreen> {
-                GenerateScreen(dogViewModel)
+                GenerateScreen(dogViewModel, onBackClick = {navController.navigateUp()})
         }
 
         composable<RecentlyGeneratedScreen> {
-            RecentlyGeneratedScreen(dogViewModel)
+            RecentlyGeneratedScreen(dogViewModel, onBackClick = {navController.navigateUp()})
         }
     }
 }
