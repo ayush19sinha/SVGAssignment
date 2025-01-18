@@ -7,9 +7,10 @@ import androidx.compose.runtime.Composable
 import my.android.svgassignment.ui.theme.PrimaryButtonColor
 
 @Composable
-fun AppButton(title: String, onButtonClick:()-> Unit){
+fun AppButton(title: String, onButtonClick:()-> Unit, enabled: Boolean = true){
     Button(
         onClick = onButtonClick,
+        enabled = enabled,
         colors = ButtonDefaults.buttonColors(
             containerColor = PrimaryButtonColor
         )
